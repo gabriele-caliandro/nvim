@@ -26,4 +26,5 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down and center" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up and center" })
 
 -- Replace selection without losing clipboard content
+-- FIXME: this doesn't work
 vim.keymap.set("v", "p", '"_dP', { desc = "Paste without losing clipboard" })
