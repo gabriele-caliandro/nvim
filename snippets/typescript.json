@@ -1,0 +1,11 @@
+{
+  "Return Result Error neverthrow": {
+    "prefix": "rerr",
+    "body": [
+      "if(${1:result}.isErr()) {",
+      "  return err(${1:result}.error);",
+      "}"
+    ],
+    "description": "Return Result Error neverthrow"
+  }
+}

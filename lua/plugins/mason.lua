@@ -1,10 +1,11 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   opts = {
     ensure_installed = {
       "stylua",
       "shellcheck",
       "shfmt",
+      "tree-sitter-cli",
 
       -- python
       "ruff",
@@ -16,7 +17,7 @@ return {
       -- docker
       "hadolint",
       "docker-compose-language-service",
-      "docker-file-language-server",
+      "dockerfile-language-server",
     },
   },
 }

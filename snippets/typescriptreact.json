@@ -1,0 +1,11 @@
+{
+  "React Component with cn": {
+    "prefix": "rfcc",
+    "body": [
+      "export const ${1:ComponentName} = ({ className, ...props }: ComponentProps<\"${2:div}\">) => {",
+      "  return <${2:div} className={cn(\"${3}\", className)} {...props}/>",
+      "};"
+    ],
+    "description": "React functional component with cn utility"
+  }
+}
