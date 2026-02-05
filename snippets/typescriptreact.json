@@ -1,11 +1,27 @@
 {
   "React Component with cn": {
-    "prefix": "rfcc",
+    "prefix": "rfc",
     "body": [
-      "export const ${1:ComponentName} = ({ className, ...props }: ComponentProps<\"${2:div}\">) => {",
-      "  return <${2:div} className={cn(\"${3}\", className)} {...props}/>",
-      "};"
+      "export type ${1:ComponentName}Props = {} & ComponentPropsWithoutRef<\"${2:div}\">;",
+      "export const ${1:ComponentName} = forwardRef<HTMLDivElement, ${1:ComponentName}Props>(({ className, ...props }, ref) => {",
+      "  return <${2:div} ref={ref} className={cn(\"${3}\", className)} {...props}/>",
+      "});"
     ],
     "description": "React functional component with cn utility"
+  },
+  "useMemo with empty dependencies": {
+    "prefix": "umemo",
+    "body": ["useMemo(() => {", "  $1", "}, []);"],
+    "description": "useMemo hook with empty dependencies array"
+  },
+  "useEffect with empty dependencies": {
+    "prefix": "uef",
+    "body": ["useEffect(() => {", "  $1", "}, []);"],
+    "description": "useEffect hook with empty dependencies array"
+  },
+  "useCallback with empty dependencies": {
+    "prefix": "ucb",
+    "body": ["useCallback(() => {", "  $1", "}, []);"],
+    "description": "useCallback hook with empty dependencies array"
   }
 }

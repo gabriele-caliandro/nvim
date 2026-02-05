@@ -20,6 +20,30 @@ return {
             },
           },
         },
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  -- cn() utility
+                  { "cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- clsx() utility
+                  { "clsx\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- cva() base classes
+                  { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- cva() variants
+                  { "cva\\([^,]*,\\s*\\{([^}]*)\\}", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- twMerge() utility
+                  { "twMerge\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]" },
+                  -- className= prop
+                  { "className[=:]\\s*[\"'`]([^\"'`]*)[\"'`]" },
+                  -- class= prop
+                  { "class[=:]\\s*[\"'`]([^\"'`]*)[\"'`]" },
+                },
+              },
+            },
+          },
+        },
       },
     },
   },
